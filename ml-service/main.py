@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, Any, Optional, List
 
-app = FastAPI(title="DecisionTwin AI ML Microservice", version="1.0.0")
+app = FastAPI(title="DecisionTwin AI ML Microservice", version="1.1.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -44,18 +44,19 @@ def health_check():
 
 @app.post("/predict")
 def predict_outcome(payload: FeatureVectorPayload):
-    current_salary = payload.currentSalary or 500000.0
-    exp = payload.experienceYears or 2
-    attrs = payload.optionAttributes
+    current_salary = float(payload.currentSalary if payload.currentSalary is not None else 500000.0)
+    exp = int(payload.experienceYears if payload.experienceYears is not None else 2)
+    savings = float(payload.savings if payload.savings is not None else 0.0)
+    attrs = payload.optionAttributes or {}
     category = payload.category
 
-    offered = float(attrs.get("offeredSalary", 0.0))
-    tuition = float(attrs.get("tuitionCost", 0.0))
-    investment = float(attrs.get("initialInvestment", 0.0))
+    offered = float(attrs.get("offeredSalary") or 0.0)
+    tuition = float(attrs.get("tuitionCost") or 0.0)
+    investment = float(attrs.get("initialInvestment") or 0.0)
 
     if category == "higher_education":
         predicted_salary = max(current_salary * 1.65, 950000.0)
-        total_cost = tuition + (payload.savings * 0.2)
+        total_cost = tuition + (savings * 0.2)
         roi = ((predicted_salary - current_salary) * 3 / max(total_cost, 1.0)) * 100
         success_prob = 0.88
     elif category in ["job_selection", "career_change"]:

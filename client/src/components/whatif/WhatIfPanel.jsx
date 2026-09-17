@@ -3,7 +3,15 @@ import api from '../../services/api';
 import { formatINR, getRiskColor } from '../../utils/formatters';
 import { Sliders, RefreshCw, CheckCircle2, ArrowRight, Sparkles, AlertCircle } from 'lucide-react';
 
-export default function WhatIfPanel({ scenarioId, options, onApplyChanges }) {
+export default function WhatIfPanel({ scenarioId, options = [], onApplyChanges }) {
+  if (!options || options.length === 0) {
+    return (
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-8 text-center text-slate-400">
+        No options available to run What-If sensitivity analysis.
+      </div>
+    );
+  }
+
   const [selectedOptionId, setSelectedOptionId] = useState(options[0]?._id);
   const currentOption = options.find(o => o._id === selectedOptionId) || options[0];
 

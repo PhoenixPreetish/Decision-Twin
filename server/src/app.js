@@ -33,7 +33,7 @@ app.get('/api/health', (req, res) => {
     status: 'online',
     service: 'DecisionTwin AI REST API Layer',
     timestamp: new Date().toISOString(),
-    version: '1.0.0'
+    version: '1.1.0'
   });
 });
 

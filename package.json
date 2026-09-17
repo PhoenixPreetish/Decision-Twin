@@ -1,6 +1,6 @@
 {
   "name": "decisiontwin-ai",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "DecisionTwin AI: An Intelligent Decision Simulation and Risk Analytics Platform",
   "scripts": {
     "install:all": "npm --prefix server install && npm --prefix client install",

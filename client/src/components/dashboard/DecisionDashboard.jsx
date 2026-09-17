@@ -77,6 +77,15 @@ export default function DecisionDashboard() {
     );
   }
 
+  const {
+    scenario,
+    options = [],
+    riskScores = [],
+    simulations = [],
+    predictions = [],
+    goalConstraint
+  } = data;
+
   const getOptId = (item) => (item?.optionId?._id || item?.optionId || '').toString();
   const getObjId = (opt) => (opt?._id || '').toString();
 

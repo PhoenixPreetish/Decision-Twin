@@ -1,6 +1,6 @@
 {
   "name": "decisiontwin-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Express.js REST API layer for DecisionTwin AI",
   "main": "server.js",
   "scripts": {
