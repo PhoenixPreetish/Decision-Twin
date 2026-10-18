@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ===============================================================
+   Humanized Light Theme System
+   Organic Warm Paper Surfaces (#FAF9F5), Natural Charcoal (#1C1917)
+   Signature Accent: #CC3A63 (Rose / Velvet Berry)
+   =============================================================== */
+
+html.light {
+  color-scheme: light;
+}
+
+/* Warm, gentle canvas reducing eye strain */
+html.light body {
+  background-color: #FAF9F5;
+  color: #1C1917;
+}
+
+/* Card & Surface Hierarchy */
+html.light .bg-slate-950 {
+  background-color: #F7F5F0 !important;
+  color: #1C1917 !important;
+}
+
+html.light .bg-slate-900 {
+  background-color: #FFFFFF !important;
+  color: #1C1917 !important;
+  border-color: #EAE6E1 !important;
+  box-shadow: 0 1px 3px 0 rgba(28, 25, 23, 0.04), 0 4px 14px -2px rgba(28, 25, 23, 0.03) !important;
+}
+
+html.light .bg-slate-850 {
+  background-color: #F4F2ED !important;
+  color: #1C1917 !important;
+  border-color: #EAE6E1 !important;
+}
+
+html.light .bg-slate-800 {
+  background-color: #EDE9E3 !important;
+  color: #1C1917 !important;
+  border-color: #E2DDD5 !important;
+}
+
+/* Delicate, warm hairline borders */
+html.light .border-slate-800,
+html.light .border-slate-750,
+html.light .border-slate-700 {
+  border-color: #EAE6E1 !important;
+}
+
+html.light .border-slate-850 {
+  border-color: #DCD7CF !important;
+}
+
+/* Human-Centered Typography Hierarchy */
+html.light .text-white {
+  color: #1C1917 !important;
+}
+
+html.light .text-slate-100,
+html.light .text-slate-200 {
+  color: #292524 !important;
+}
+
+html.light .text-slate-300 {
+  color: #44403C !important;
+}
+
+html.light .text-slate-400 {
+  color: #6E6760 !important;
+}
+
+html.light .text-slate-500 {
+  color: #9C958D !important;
+}
+
+/* Translucent surfaces */
+html.light .bg-slate-950\/50,
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/70,
+html.light .bg-slate-950\/80 {
+  background-color: rgba(247, 245, 240, 0.92) !important;
+}
+
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/90 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Soft, tactile form inputs */
+html.light input,
+html.light select,
+html.light textarea {
+  background-color: #FFFFFF !important;
+  color: #1C1917 !important;
+  border-color: #D6D1C9 !important;
+  box-shadow: 0 1px 2px 0 rgba(28, 25, 23, 0.04) !important;
+}
+
+html.light input:focus,
+html.light select:focus,
+html.light textarea:focus {
+  border-color: #CC3A63 !important;
+  box-shadow: 0 0 0 3px rgba(204, 58, 99, 0.15) !important;
+  outline: none !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #9C958D !important;
+}
+
+/* Warm stone scrollbars */
+html.light ::-webkit-scrollbar-track {
+  background: #F4F2ED;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #D6D1C9;
+  border-radius: 4px;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #B8B2A7;
+}
+
+/* ===============================================================
+   Humanized Warm Rose Accent (#CC3A63)
+   Harmonious Radiance & High-Readability Editorial Banners
+   =============================================================== */
+
+/* Hero Banner: Warm, elegant rose blush with #CC3A63 highlights */
+html.light .hero-card-cc3a63,
+html.light .bg-gradient-to-r.from-slate-900,
+html.light .bg-gradient-to-br.from-slate-900 {
+  background: linear-gradient(135deg, #FFF0F4 0%, #FFE5EC 45%, #FDE0E7 100%) !important;
+  border: 1px solid rgba(204, 58, 99, 0.22) !important;
+  box-shadow: 0 10px 30px -8px rgba(204, 58, 99, 0.12), 0 2px 6px rgba(28, 25, 23, 0.04) !important;
+}
+
+html.light .hero-card-cc3a63 h1,
+html.light .hero-card-cc3a63 h2,
+html.light .bg-gradient-to-r.from-slate-900 h1,
+html.light .bg-gradient-to-r.from-slate-900 h2,
+html.light .bg-gradient-to-br.from-slate-900 h1,
+html.light .bg-gradient-to-br.from-slate-900 h2 {
+  color: #1C1917 !important;
+}
+
+html.light .hero-card-cc3a63 p,
+html.light .bg-gradient-to-r.from-slate-900 p,
+html.light .bg-gradient-to-br.from-slate-900 p {
+  color: #44403C !important;
+}
+
+html.light .hero-card-cc3a63 .text-brand-400,
+html.light .bg-gradient-to-r.from-slate-900 .text-brand-400,
+html.light .bg-gradient-to-br.from-slate-900 .text-brand-400 {
+  color: #CC3A63 !important;
+}
+
+html.light .hero-card-cc3a63 .bg-brand-500\/10,
+html.light .bg-gradient-to-r.from-slate-900 .bg-brand-500\/10,
+html.light .bg-gradient-to-br.from-slate-900 .bg-brand-500\/10 {
+  background-color: rgba(204, 58, 99, 0.1) !important;
+  border-color: rgba(204, 58, 99, 0.25) !important;
+  color: #CC3A63 !important;
+}
+
+/* Secondary Action buttons inside the hero banner */
+html.light .hero-card-cc3a63 .bg-slate-800,
+html.light .bg-gradient-to-r.from-slate-900 .bg-slate-800,
+html.light .bg-gradient-to-br.from-slate-900 .bg-slate-800 {
+  background-color: #FFFFFF !important;
+  border-color: rgba(204, 58, 99, 0.25) !important;
+  box-shadow: 0 1px 3px rgba(204, 58, 99, 0.08) !important;
+}
+
+html.light .hero-card-cc3a63 .bg-slate-800 span,
+html.light .hero-card-cc3a63 .bg-slate-800 svg,
+html.light .bg-gradient-to-r.from-slate-900 .bg-slate-800 span,
+html.light .bg-gradient-to-r.from-slate-900 .bg-slate-800 svg {
+  color: #CC3A63 !important;
+}
+
+html.light .hero-card-cc3a63 .bg-slate-800:hover,
+html.light .bg-gradient-to-r.from-slate-900 .bg-slate-800:hover {
+  background-color: #FFF5F7 !important;
+  border-color: #CC3A63 !important;
+}
+
+/* Primary CTA Button: Vibrant #CC3A63 with soft elevation */
+html.light .from-brand-500.to-emerald-500 {
+  background: linear-gradient(135deg, #CC3A63 0%, #B82B52 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(204, 58, 99, 0.3) !important;
+}
+
+html.light .from-brand-500.to-emerald-500:hover {
+  background: linear-gradient(135deg, #B82B52 0%, #A01E42 100%) !important;
+}
+
+html.light .from-brand-500.to-emerald-500 * {
+  color: #FFFFFF !important;
+}
+
+/* Brand Highlights & Accents across the UI */
+html.light .text-brand-400 {
+  color: #CC3A63 !important;
+}
+
+html.light .bg-brand-500\/10 {
+  background-color: rgba(204, 58, 99, 0.08) !important;
+  color: #CC3A63 !important;
+}
+
+html.light .bg-brand-500\/20 {
+  background-color: rgba(204, 58, 99, 0.14) !important;
+  color: #CC3A63 !important;
+}
+
+html.light .border-brand-500\/20,
+html.light .border-brand-500\/30 {
+  border-color: rgba(204, 58, 99, 0.25) !important;
+}
+
+/* Active navigation tabs in Light Mode */
+html.light .border-brand-500 {
+  border-color: #CC3A63 !important;
+  color: #CC3A63 !important;
+}
+
+/* Humanized Header & Sidebar */
+html.light header {
+  background-color: rgba(250, 249, 245, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom-color: #EAE6E1 !important;
+}
+
+html.light aside {
+  background-color: #F7F5F0 !important;
+  border-right-color: #EAE6E1 !important;
+}
+
+html.light aside nav a.bg-brand-500\/10 {
+  background-color: #FFF0F4 !important;
+  color: #CC3A63 !important;
+  border-color: rgba(204, 58, 99, 0.25) !important;
+  box-shadow: 0 1px 3px rgba(204, 58, 99, 0.08) !important;
+}
+
+html.light aside nav a:hover:not(.bg-brand-500\/10) {
+  background-color: #EDE9E3 !important;
+  color: #1C1917 !important;
+}
+
+/* ScoreGauge background circle in Light Mode */
+html.light svg circle[stroke="#1e293b"] {
+  stroke: #EDE9E3 !important;
+}
+
+/* Recharts Tooltip in Light Mode */
+html.light .recharts-default-tooltip {
+  background-color: #FFFFFF !important;
+  border: 1px solid #EAE6E1 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 25px -5px rgba(28, 25, 23, 0.08) !important;
+  color: #1C1917 !important;
+}
+
+html.light .recharts-cartesian-grid line {
+  stroke: #EAE6E1 !important;
+  opacity: 0.8 !important;
+}
