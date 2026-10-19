@@ -57,7 +57,7 @@ export default function MarketIntelligenceView() {
       <div className="bg-gradient-to-br from-slate-900 via-brand-950/20 to-slate-900 p-6 sm:p-8 rounded-3xl border border-brand-500/20 shadow-xl space-y-2">
         <div className="flex items-center gap-2 text-brand-400 text-xs font-bold uppercase tracking-wider">
           <Globe className="w-4 h-4" />
-          <span>Curated Reference Intelligence • Version 1.0.2026</span>
+          <span>Curated Reference Intelligence</span>
         </div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-white">
           Market Intelligence & Industry Benchmarks
